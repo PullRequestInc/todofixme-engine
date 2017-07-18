@@ -1,8 +1,8 @@
-FROM python:alpine
+FROM python:slim
 
 COPY app /app
 
-RUN adduser -u 5000 app -D
+RUN adduser -u 5000 app --disabled-password
 RUN chown -R app:app /app
 
 USER app
