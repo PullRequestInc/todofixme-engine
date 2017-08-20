@@ -62,7 +62,6 @@ def search_file(patterns, file_path):
 
     try:
         with open(file_path, 'r') as fd:
-            matching_line = None
             for line_number, line in enumerate(fd, 1):
                 if len(line) > 1000:
                     # only allow lines less than 1000 characters, since greater than this is likely not source code
