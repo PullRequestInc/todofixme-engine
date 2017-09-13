@@ -69,7 +69,7 @@ def search_file(patterns, file_path):
 
                 for pattern in patterns:
                     if pattern in line:
-                        _report_line(file_path, line_number, line)
+                        _report_line(file_path, line_number, pattern)
                         break
 
     except (ValueError, IOError):
